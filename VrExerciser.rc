@@ -1,0 +1,353 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 한국어 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_TRAY MENU 
+BEGIN
+    POPUP "_TRAY_MENU_"
+    BEGIN
+        MENUITEM "Show Application",            ID__SHOWAPPLICATION
+        MENUITEM SEPARATOR
+        MENUITEM "EXIT",                        ID__EXIT32773
+    END
+END
+
+#endif    // 한국어 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 영어(미국) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\VrExerciser.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\VrExerciser.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG  0, 0, 250, 76
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About VrExerciser"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,21,20
+    LTEXT           "VRDll Exerciser     Version 1.0",IDC_STATIC,55,25,120,8,SS_NOPREFIX
+    LTEXT           "Copyright(c) 2003     Veritec, Inc.",IDC_STATIC,7,61,119,8
+    DEFPUSHBUTTON   "OK",IDOK,193,7,50,14,WS_GROUP
+END
+
+IDD_VREXERCISER_DIALOG DIALOGEX 0, 0, 380, 383
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "VR Exerciser"
+FONT 10, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "E&xit",IDOK,310,177,50,17
+    PUSHBUTTON      "&Load Bitmap",IDC_LOAD_BITMAP,310,15,50,17
+    LTEXT           "Bitmap Filename",IDC_STATIC_BITMAPINFO,6,6,186,48
+    LTEXT           "",IDC_STATIC_BITMAP,6,60,186,132,SS_SUNKEN
+    PUSHBUTTON      "&Decode",IDC_DECODE,310,39,50,17,WS_DISABLED
+    PUSHBUTTON      "&Reset",IDC_RESET,310,65,50,17
+    LTEXT           "Vericode text",IDC_STATIC_TEXT,7,199,366,12,WS_BORDER
+    GROUPBOX        "Configuration",IDC_STATIC,195,33,105,163
+    COMBOBOX        IDC_COMBOMatSize,265,64,25,51,CBS_DROPDOWN | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Matrix Size",IDC_STATIC,208,66,38,13
+    LTEXT           "Sample Width",IDC_STATIC,207,86,45,12
+    COMBOBOX        IDC_COMBOSampleWidth,265,84,25,39,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Bits Per Cell",IDC_STATIC,208,104,46,14
+    COMBOBOX        IDC_COMBOBitsPerCell,264,104,25,46,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Prefiltering",IDC_STATIC,208,145,46,11
+    CONTROL         "",IDC_CHECKPreFilter,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,269,145,8,8
+    LTEXT           "Matrix Fixed",IDC_STATIC,207,48,46,11
+    CONTROL         "",IDC_CHECKFixedMT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,268,50,11,8
+    LTEXT           "Auto Matrix Size(0) working:\nSquare and  Rectangle VC \nSquare and  Rectangle DM",IDC_STATIC_STATUS,207,157,85,35
+    LTEXT           "Symbol Type",IDC_STATIC_SYMBOL,207,18,46,11
+    COMBOBOX        IDC_COMBO_SYM,265,17,25,38,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Symbol",IDC_STATIC_NormalContrast,207,126,30,11
+    COMBOBOX        IDC_COMBO_CONTRAST,238,124,58,46,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST_LOG,6,234,366,144,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    CONTROL         "Auto Mode",IDC_CHECK_MODE_AUTO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,311,89,44,10
+    EDITTEXT        IDC_EDIT_RESULT,7,218,83,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Save",IDC_BTN_SAVE,310,106,50,17
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "VrExerciser MFC Application"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "VrExerciser"
+            VALUE "LegalCopyright", "Copyright (C) 2003"
+            VALUE "OriginalFilename", "VrExerciser.EXE"
+            VALUE "ProductName", "VrExerciser Application"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 243
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 69
+    END
+
+    IDD_VREXERCISER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 373
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 376
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_VREXERCISER_DIALOG DLGINIT
+BEGIN
+    IDC_COMBOMatSize, 0x403, 3, 0
+0x2030, "\000" 
+    IDC_COMBOMatSize, 0x403, 2, 0
+0x0039, 
+    IDC_COMBOMatSize, 0x403, 3, 0
+0x3031, "\000" 
+    IDC_COMBOMatSize, 0x403, 3, 0
+0x3131, "\000" 
+    IDC_COMBOMatSize, 0x403, 3, 0
+0x3231, "\000" 
+    IDC_COMBOMatSize, 0x403, 3, 0
+0x3331, "\000" 
+    IDC_COMBOMatSize, 0x403, 3, 0
+0x3431, "\000" 
+    IDC_COMBOMatSize, 0x403, 3, 0
+0x3531, "\000" 
+    IDC_COMBOMatSize, 0x403, 3, 0
+0x3631, "\000" 
+    IDC_COMBOMatSize, 0x403, 3, 0
+0x3731, "\000" 
+    IDC_COMBOMatSize, 0x403, 3, 0
+0x3831, "\000" 
+    IDC_COMBOMatSize, 0x403, 3, 0
+0x3931, "\000" 
+    IDC_COMBOMatSize, 0x403, 3, 0
+0x3032, "\000" 
+    IDC_COMBOMatSize, 0x403, 3, 0
+0x3132, "\000" 
+    IDC_COMBOMatSize, 0x403, 3, 0
+0x3232, "\000" 
+    IDC_COMBOMatSize, 0x403, 3, 0
+0x3432, "\000" 
+    IDC_COMBOMatSize, 0x403, 3, 0
+0x3632, "\000" 
+    IDC_COMBOMatSize, 0x403, 3, 0
+0x3832, "\000" 
+    IDC_COMBOMatSize, 0x403, 3, 0
+0x3033, "\000" 
+    IDC_COMBOMatSize, 0x403, 3, 0
+0x3233, "\000" 
+    IDC_COMBOMatSize, 0x403, 3, 0
+0x3433, "\000" 
+    IDC_COMBOMatSize, 0x403, 3, 0
+0x3633, "\000" 
+    IDC_COMBOMatSize, 0x403, 3, 0
+0x3833, "\000" 
+    IDC_COMBOMatSize, 0x403, 3, 0
+0x3034, "\000" 
+    IDC_COMBOMatSize, 0x403, 3, 0
+0x3234, "\000" 
+    IDC_COMBOMatSize, 0x403, 3, 0
+0x3434, "\000" 
+    IDC_COMBOMatSize, 0x403, 3, 0
+0x3634, "\000" 
+    IDC_COMBOMatSize, 0x403, 3, 0
+0x3834, "\000" 
+    IDC_COMBOSampleWidth, 0x403, 2, 0
+0x0031, 
+    IDC_COMBOSampleWidth, 0x403, 2, 0
+0x0032, 
+    IDC_COMBOSampleWidth, 0x403, 2, 0
+0x0033, 
+    IDC_COMBOSampleWidth, 0x403, 2, 0
+0x0034, 
+    IDC_COMBOSampleWidth, 0x403, 2, 0
+0x0035, 
+    IDC_COMBOSampleWidth, 0x403, 2, 0
+0x0036, 
+    IDC_COMBOSampleWidth, 0x403, 2, 0
+0x0037, 
+    IDC_COMBOSampleWidth, 0x403, 2, 0
+0x0038, 
+    IDC_COMBOBitsPerCell, 0x403, 2, 0
+0x0032, 
+    IDC_COMBOBitsPerCell, 0x403, 2, 0
+0x0034, 
+    IDC_COMBOBitsPerCell, 0x403, 2, 0
+0x0038, 
+    IDC_COMBOBitsPerCell, 0x403, 3, 0
+0x3631, "\000" 
+    IDC_COMBO_SYM, 0x403, 5, 0
+0x7541, 0x6f74, "\000" 
+    IDC_COMBO_SYM, 0x403, 3, 0
+0x4356, "\000" 
+    IDC_COMBO_SYM, 0x403, 3, 0
+0x4d44, "\000" 
+    IDC_COMBO_CONTRAST, 0x403, 15, 0
+0x6c42, 0x6361, 0x206b, 0x6e6f, 0x5720, 0x6968, 0x6574, "\000" 
+    IDC_COMBO_CONTRAST, 0x403, 15, 0
+0x6857, 0x7469, 0x2065, 0x6e6f, 0x4220, 0x616c, 0x6b63, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About VrExerciser..."
+END
+
+#endif    // 영어(미국) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\VrExerciser.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
